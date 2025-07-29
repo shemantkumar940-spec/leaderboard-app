@@ -3,6 +3,9 @@
 
 Link - > https://leaderboardapp11.netlify.app/
 
+Github Public Repo link   - > https://github.com/shemantkumar940-spec/leaderboard-app.git
+
+
 ## Overview
 A full-stack leaderboard application that allows users to claim points, view dynamic rankings, and track claim history. Built with:
 - **Frontend:** ReactJS (Vite)
