@@ -1,63 +1,71 @@
-# Leaderboard Assignment
+
+# Leaderboard App
 
 ## Overview
-A full-stack leaderboard system built with:
+A full-stack leaderboard application that allows users to claim points, view dynamic rankings, and track claim history. Built with:
 - **Frontend:** ReactJS (Vite)
-- **Backend:** NodeJS (Express) + MongoDB
+- **Backend:** Node.js (Express)
+- **Database:** MongoDB (local or Atlas)
 
 ## Features
-- User selection and addition
-- Claim random points (1-10) for users (each user can claim only once)
-- Dynamic leaderboard with real-time ranking
-- Claim history tracking
+- Select and add users to the leaderboard
+- Claim random points (1-10) for a selected user (each user can claim only once)
+- Dynamic leaderboard with real-time ranking updates
+- Claim history tracking for all users
 - Responsive, modern UI for mobile, tablet, and desktop
 
-## How to Run
+## Getting Started
 
 ### Prerequisites
 - Node.js v20 LTS
-- MongoDB (local or cloud)
+- MongoDB (local instance or MongoDB Atlas)
 
 ### Backend Setup
-1. Open a terminal and navigate to the `server` folder:
+1. Open a terminal and navigate to the `server` directory:
    ```bash
    cd server
    npm install
-   ```
-2. Start MongoDB locally (default: mongodb://localhost:27017/leaderboard)
+
 3. Start the backend server:
    ```bash
-   npm run dev
+   npm start
    ```
 4. (Optional) Initialize users by visiting:
    - [http://localhost:5000/init-users](http://localhost:5000/init-users)
 
 ### Frontend Setup
-1. In the project root, install frontend dependencies:
+1. Open a new terminal and navigate to the `client` directory:
    ```bash
+   cd client
    npm install
    ```
-2. Start the frontend:
+2. Start the frontend development server:
    ```bash
    npm run dev
    ```
-3. Open the browser at the address shown in the terminal (usually [http://localhost:5173](http://localhost:5173)).
+3. Open your browser at the address shown in the terminal (usually [http://localhost:5173](http://localhost:5173)).
 
 ## API Endpoints
-- `GET /users` — Get leaderboard
-- `POST /users` — Add user
-- `POST /claim` — Claim points (only once per user)
-- `GET /history` — Claim history
+
+| Method | Endpoint      | Description                        |
+|--------|---------------|------------------------------------|
+| GET    | /users        | Get leaderboard                     |
+| POST   | /users        | Add a new user                      |
+| POST   | /claim        | Claim points (once per user)        |
+| GET    | /history      | Get claim history                   |
 
 ## Notes
 - Each user can only claim points once. Further claims are blocked.
 - All claim actions are recorded in the claim history collection.
-- The UI is custom-built and not copied from any public GitHub repository.
+- The UI is custom-built and not copied from any public repository.
 
 ---
 
-**Submission:**
-- All code is original and well-commented.
-- Responsive and optimized for all devices.
-- To upload to GitHub, push the entire folder (including `server`, `src`, `.github`, and this `README.md`).
-- Fill out the Round 1 Task Submission Form as per instructions.
+## Submission Checklist
+- [x] All code is original and well-commented
+- [x] Responsive and optimized for all devices
+- [x] Project structure is clean (`server`, `client`, etc.)
+- [x] This `README.md` is complete and up to date
+
+---
+
